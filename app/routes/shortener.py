@@ -7,7 +7,7 @@ from app.schemas import URLCreate, URLResponse
 from app.utils.generator import generate_short_code
 
 router = APIRouter()
-BASE_URL = "https://parvatai.com"
+BASE_URL = "https://url-shortener-0ziy.onrender.com"
 
 @router.post("/shorten", response_model=URLResponse)
 def shorten_url(payload: URLCreate, db: Session = Depends(get_db)):
